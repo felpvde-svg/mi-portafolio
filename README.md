@@ -11,13 +11,11 @@ Mi portafolio también está desplegado en Netlify, puedes verlo en el siguiente
 
 ---
 
-## 🎥 Video Demo
-- Aquí puedes ver un video mostrando la navegación y funcionalidades principales de mi portafolio:
-
 <video width="720" height="480" controls>
-  <source src="public/demo.mp4" type="video/mp4">
+  <source src="https://github.com/felpvde-svg/mi-portafolio/blob/main/assets/demo.mp4?raw=true" type="video/mp4">
   Tu navegador no soporta el video.
 </video>
+
 
 
 
