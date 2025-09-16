@@ -8,17 +8,10 @@ Mi  objetivo principal fue crear un portafolio que no solo muestre mis habilidad
 Mi portafolio también está desplegado en Netlify, puedes verlo en el siguiente enlace:  
 
 👉 **[Ver Proyecto en Vivo](https://portafoliofelip.netlify.app/#about)**  
+      
+      [Ver Video Demo](https://github.com/felpvde-svg/mi-portafolio/raw/main/public/demo.mp4)**
 
----
-
-<video width="720" height="480" controls>
-  <source src="https://github.com/felpvde-svg/mi-portafolio/blob/main/assets/demo.mp4?raw=true" type="video/mp4">
-  Tu navegador no soporta el video.
-</video>
-
-
-
-
+ 
 
 # Mi portafolio
 
