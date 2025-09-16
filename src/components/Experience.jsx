@@ -116,7 +116,7 @@ const Experience = () => {
                   .querySelector('.download-btn')
                   .setAttribute('src', download);
               }}>
-              Mi portafolio
+              certificado quipux
               <img
                 src={download}
                 alt="download"

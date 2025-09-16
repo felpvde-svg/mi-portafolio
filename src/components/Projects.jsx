@@ -116,8 +116,8 @@ const Projects = () => {
   return (
     <div className="-mt-[6rem]">
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>Case Studies</p>
-        <h2 className={`${styles.sectionHeadTextLight}`}>Projects.</h2>
+        <p className={`${styles.sectionSubText} `}>Esfuerzo,constancia y disciplina</p>
+        <h2 className={`${styles.sectionHeadTextLight}`}>Proyectos</h2>
       </motion.div>
 
       <div className="w-full flex">

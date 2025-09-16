@@ -26,8 +26,8 @@ const Contact = () => {
 
     emailjs
       .send(
-        'serviceID',
-        'templateID',
+        'service_xddp7q9',
+        'template_rahdc7h',
         {
           from_name: form.name,
           to_name: 'Felipe Jaramillo Arboleda',
@@ -35,7 +35,7 @@ const Contact = () => {
           to_email: 'felpvde@gmail.com',
           message: form.message,
         },
-        'yourpublickey'
+        '-ssz6i9k9AHxFMuW5'
       )
       .then(
         () => {

@@ -8,7 +8,7 @@ import { textVariant, fadeIn } from "../utils/motion";
 
 const DragonModel = () => {
   const { scene } = useGLTF("/models/dragon_with_pearl.glb");
-  return <primitive object={scene} scale={18} position={[0, -7, 0]} />;
+  return <primitive object={scene} scale={8} position={[0, -1.5, 0]} />;
 };
 
 const HobbiesDragon = () => {
@@ -23,51 +23,47 @@ const HobbiesDragon = () => {
   return (
     <div className="w-full -mt-[4rem]" id="hobbies">
       <div className="max-w-7xl mx-auto px-6 sm:px-12 py-8">
-        {/* Encabezado */}
+        {/* Título */}
         <motion.div variants={textVariant()} className="text-left">
           <p className={styles.sectionSubText}>
             Mi tiempo lo aprovecho no solo en el ámbito laboral sino también en:
           </p>
-          <h2
-            className={`${styles.sectionHeadText} text-white`}
-          >
+          <h2 className={`${styles.sectionHeadText} text-white`}>
             Mis Aficiones
           </h2>
         </motion.div>
 
-        {/* Texto descriptivo */}
+        {/* Texto */}
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-taupe text-[17px] max-w-2xl leading-[28px] text-left"
+          className="mt-3 text-taupe text-[15px] sm:text-[17px] max-w-2xl leading-[26px] sm:leading-[28px] text-left"
         >
           En mis ratos libres me gusta mantener un equilibrio entre lo físico,
-          lo creativo y lo mental. Estas aficiones representan mi forma de crecer
-          y disfrutar de la vida, desde entrenar hasta conectar con la naturaleza.
+          lo creativo y lo mental.
         </motion.p>
 
-        {/* Cuadros grises con hobbies */}
-        <div className="mt-8 flex flex-wrap justify-center gap-5">
+        {/* Hobbies responsivos */}
+        <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
           {hobbies.map((hobby, index) => (
             <motion.div
               key={hobby.name}
               variants={fadeIn("up", "spring", index * 0.2, 0.8)}
               initial="hidden"
               whileInView="show"
-              className="bg-jetLight text-taupe px-6 py-4 rounded-[14px] 
-                         shadow-card font-beckman font-bold text-[16px] 
-                         tracking-[1px] hover:scale-105 transition-transform 
-                         duration-300 cursor-default"
+              className="bg-jetLight text-taupe px-4 py-3 rounded-[14px] 
+                         shadow-card font-bold text-[14px] sm:text-[16px] 
+                         hover:scale-105 transition-transform duration-300 text-center"
             >
               {hobby.name}
             </motion.div>
           ))}
         </div>
 
-        {/* Dragón más compacto */}
-        <div className="mt-12 w-full h-[320px] sm:h-[380px] flex justify-center items-center">
-          <Canvas camera={{ position: [0, 0, 15], fov: 50 }}>
-            <ambientLight intensity={1.1} />
-            <directionalLight position={[10, 10, 5]} intensity={1.3} />
+        {/* Dragón más liviano */}
+        <div className="mt-12 w-full h-[300px] sm:h-[360px] flex justify-center items-center">
+          <Canvas camera={{ position: [0, 0, 12], fov: 45 }}>
+            <ambientLight intensity={0.9} />
+            <directionalLight position={[5, 10, 5]} intensity={1.2} />
             <Suspense fallback={null}>
               <DragonModel />
             </Suspense>
@@ -80,6 +76,8 @@ const HobbiesDragon = () => {
 };
 
 export default SectionWrapper(HobbiesDragon, "hobbies");
+
+
 
 
 
